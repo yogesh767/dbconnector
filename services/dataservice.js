@@ -12,7 +12,7 @@ const client = require("../connection/connection");
             const collection =await database.collection(collectionName);
             // console.log(collection)
             // Query for a movie that has the title 'Back to the Future'
-            const data = await collection.findOne({"name":"I am nice person"});
+            const data = await collection.find(query).toArray();
             console.log(data);
             return data
           } 
